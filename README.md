@@ -17,10 +17,8 @@ Connectez-vous en SSH au Raspberry pour exécuter les commandes ci-dessous.
 sudo apt update && sudo apt upgrade
 ```
 
-### Installation du serveur FTP et du lecteur Vidéo (VLC)  :
-```
-sudo apt install proftpd
-```
+### Installation du lecteur Vidéo (VLC)  :
+
 ```
 sudo apt install vlc
 ```
