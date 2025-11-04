@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Déclaration des variables
-network_path="//172.27.234.11/Services/Afficheur/_Afficheur_Accueil"
+network_path="//172.xx.xx.xx/Services/Dossier/Afficheur"
 local_mount_point="/home/pi/mappage"
 local_video_directory="/home/pi/videos"
 LDAP_username="username"
@@ -20,3 +20,4 @@ while true; do
     # Attente de 20 secondes avant la prochaine synchronisation
     sleep 20
 done
+
