@@ -29,18 +29,18 @@ sudo sed -i 's/geteuid/getppid/' /usr/bin/vlc
 ```
 
 ## Configuration
-#### Créer les différents dossiers qui seront utilisés :
+### Créer les différents dossiers qui seront utilisés :
 ```
 mkdir /home/pi/mappage /home/pi/videos /home/pi/scripts
 ```
 
-#### Création du script SCRIPT_Mappage.sh.
+### Création du script SCRIPT_Mappage.sh.
 > Coller y le modèle 'SCRIPT_Mappage.sh' présent de dans les fichiers de ce repository en adaptant les variables.
 ```
 nano /home/pi/scripts/SCRIPT_Mappage.sh
 ```
 
-#### Création du script SCRIPT_Diffusion.sh.
+### Création du script SCRIPT_Diffusion.sh.
 > Coller y le modèle 'SCRIPT_Diffusion.sh' présent de dans les fichiers de ce repository en adaptant les variables.
 ```
 nano /home/pi/scripts/SCRIPT_Diffusion.sh
@@ -48,7 +48,7 @@ nano /home/pi/scripts/SCRIPT_Diffusion.sh
 
 ## Création des services
 
-Création du service pour éxécuter SCRIPT_Mappage.sh au démarrage
+### Création du service pour éxécuter SCRIPT_Mappage.sh au démarrage
 ```
 sudo nano /etc/systemd/system/SCRIPT_Mappage.service
 ```
@@ -65,7 +65,7 @@ ExecStart=/home/pi/scripts/SCRIPT_Mappage.sh
 WantedBy=multi-user.target
 ```
 
-Création du service pour éxécuter SCRIPT_Diffusion.sh au démarrage
+### Création du service pour éxécuter SCRIPT_Diffusion.sh au démarrage
 ```
 sudo nano /etc/systemd/system/SCRIPT_Diffusion.service
 ```
@@ -82,7 +82,7 @@ ExecStart=/home/pi/scripts/SCRIPT_Diffusion.sh
 WantedBy=multi-user.target
 ```
 
-Activation des services :
+### Activation des services :
 ```
 sudo systemctl daemon-leload
 ```
