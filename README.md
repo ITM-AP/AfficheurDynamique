@@ -29,12 +29,12 @@ sudo sed -i 's/geteuid/getppid/' /usr/bin/vlc
 ```
 
 ## Configuration
-### Créer les différents dossier qui seront utilisés :
+#### Créer les différents dossier qui seront utilisés :
 ```
 mkdir /home/pi/mappage /home/pi/videos /home/pi/scripts
 ```
 
-### Script de mappage :
+#### Script de mappage :
 Créer le script avec la commande ci-dessous qui mappera les vidéos présents sur le serveur et les copiera en local sous /home/pi/videos`
 Copier y le modèle présent dans les fichiers de ce repository en adaptant les valeurs 
 ```
