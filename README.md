@@ -41,6 +41,12 @@ nano /home/pi/scripts/SCRIPT_Afficheur.sh
 ```
 Coller y le modèle 'SCRIPT_Afficheur.sh' présent de dans les fichiers de ce repository en adaptant les variables.
 
+Création du script SCRIPT_Diffusion.sh.
+```
+nano /home/pi/scripts/SCRIPT_Diffusion.sh
+```
+Coller y le modèle 'SCRIPT_Diffusion.sh' présent de dans les fichiers de ce repository en adaptant les variables.
+
 ## Création des services
 
 Création du service pour éxécuter SCRIPT_Mappage.sh au démarrage
