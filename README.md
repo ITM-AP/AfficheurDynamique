@@ -12,18 +12,18 @@
   
 ## Installation
 Connectez-vous en SSH au Raspberry pour exécuter les commandes ci-dessous.
-### Mise à jour de l'OS
+#### Mise à jour de l'OS
 ```
 sudo apt update && sudo apt upgrade
 ```
 
-### Installation du lecteur Vidéo (VLC)  :
+#### Installation du lecteur Vidéo (VLC)  :
 
 ```
 sudo apt install vlc
 ```
 
-### Autoriser VLC à s'exécuter au démarrage
+#### Autoriser VLC à s'exécuter au démarrage
 ```
 sudo sed -i 's/geteuid/getppid/' /usr/bin/vlc
 ```
