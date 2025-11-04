@@ -40,3 +40,58 @@ Copier y le modèle présent dans les fichiers de ce repository en adaptant les 
 ```
 nano SCRIPT_Afficheur.sh
 ```
+
+
+## Création des services
+
+Création du service pour éxécuter SCRIPT_Mappage.sh au démarrage
+```
+sudo nano /etc/systemd/system/SCRIPT_Mappage.service
+```
+```
+[Unit]
+Description=Mapper le dossier Afficheur_Accueil du Service T
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+ExecStart=/home/pi/scripts/SCRIPT_Mappage.sh
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Création du service pour éxécuter SCRIPT_Diffusion.sh au démarrage
+```
+sudo nano /etc/systemd/system/SCRIPT_Diffusion.service
+```
+```
+[Unit]
+Description=Lecture des vidéos
+After=SCRIPT_Mappage.service
+Requires=SCRIPT_Mappage.service
+
+[Service]
+ExecStart=/home/pi/scripts/SCRIPT_Diffusion.sh
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Activation des services :
+
+```
+sudo systemctl daemon-leload
+```
+```
+sudo systemctl enable SCRIPT_Mappage.service
+```
+```
+sudo systemctl enable SCRIPT_Diffusion.service
+```
+```
+sudo systemctl start SCRIPT_Mappage.service
+```
+```
+sudo systemctl start SCRIPT_Diffusion.service
+```
