@@ -29,18 +29,17 @@ sudo sed -i 's/geteuid/getppid/' /usr/bin/vlc
 ```
 
 ## Configuration
-#### Créer les différents dossier qui seront utilisés :
+#### Créer les différents dossiers qui seront utilisés :
 ```
 mkdir /home/pi/mappage /home/pi/videos /home/pi/scripts
 ```
 
 #### Script de mappage :
-Créer le script avec la commande ci-dessous qui mappera les vidéos présents sur le serveur et les copiera en local sous /home/pi/videos`
-Copier y le modèle présent dans les fichiers de ce repository en adaptant les valeurs 
+Création du script SCRIPT_Afficheur.sh.
 ```
-nano SCRIPT_Afficheur.sh
+nano /home/pi/scripts/SCRIPT_Afficheur.sh
 ```
-
+Coller y le modèle 'SCRIPT_Afficheur.sh' présent de dans les fichiers de ce repository en adaptant les variables.
 
 ## Création des services
 
@@ -79,7 +78,6 @@ WantedBy=multi-user.target
 ```
 
 Activation des services :
-
 ```
 sudo systemctl daemon-leload
 ```
