@@ -34,16 +34,16 @@ sudo sed -i 's/geteuid/getppid/' /usr/bin/vlc
 mkdir /home/pi/mappage /home/pi/videos /home/pi/scripts
 ```
 
-### Création du script SCRIPT_Mappage.sh.
-> Coller y le modèle 'SCRIPT_Mappage.sh' présent de dans les fichiers de ce repository en adaptant les variables.
+### Création du script SCRIPT_Mappage.sh & SCRIPT_Diffusion.sh.
+> Coller y le modèle 'SCRIPT_Mappage.sh' et 'SCRIPT_Diffusion.sh' présent de dans les fichiers de ce repository en adaptant les variables.
 ```
 nano /home/pi/scripts/SCRIPT_Mappage.sh
+nano /home/pi/scripts/SCRIPT_Diffusion.sh
 ```
 
-### Création du script SCRIPT_Diffusion.sh.
-> Coller y le modèle 'SCRIPT_Diffusion.sh' présent de dans les fichiers de ce repository en adaptant les variables.
+### Rendre les scripts exécutable.
 ```
-nano /home/pi/scripts/SCRIPT_Diffusion.sh
+chmod +x /home/pi/scripts/SCRIPT_Diffusion.sh /home/pi/scripts/SCRIPT_Mappage.sh
 ```
 
 ## Création des services
@@ -84,7 +84,7 @@ WantedBy=multi-user.target
 
 ### Activation des services :
 ```
-sudo systemctl daemon-leload
+sudo systemctl daemon-reload
 ```
 ```
 sudo systemctl enable SCRIPT_Mappage.service
